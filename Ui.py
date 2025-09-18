@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'designertLXWJA.ui'
+## Form generated from reading UI file 'QtConsoleQFBUiY.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.14
 ##
@@ -18,131 +18,6 @@ class Ui_MainWindow(object):
         if not MainWindow.objectName():
             MainWindow.setObjectName("MainWindow")
         MainWindow.resize(800, 600)
-        # --- Modern UI stylesheet ---
-        MainWindow.setStyleSheet(
-            """
-    QMainWindow {
-        background: #1e1e1e;
-    }
-
-    /* --- Menubar --- */
-    QMenuBar {
-        background-color: #2d2d2d;
-        border-bottom: 1px solid #3c3c3c;
-        font-family: 'Segoe UI', 'Ubuntu', sans-serif;
-        font-size: 13px;
-        padding: 2px;  /* smaller height */
-        color: #cccccc;
-    }
-    QMenuBar::item {
-        background: #2d2d2d;
-        padding: 4px 10px;
-        margin: 2px;
-        border-radius: 4px;
-        border: 1px solid #3c3c3c;  /* border for buttons */
-    }
-    QMenuBar::item:selected {
-        background: #0078d7;
-        color: white;
-        border: 1px solid #005a9e;  /* highlight border */
-    }
-
-    /* --- Menus --- */
-    QMenu {
-        background-color: #2d2d2d;
-        border: 1px solid #3c3c3c;
-        border-radius: 8px;
-        padding: 6px;
-        font-size: 13px;
-        color: #cccccc;
-    }
-    QMenu::item {
-        padding: 6px 20px;
-        border-radius: 4px;
-    }
-    QMenu::item:selected {
-        background-color: #0078d7;
-        color: white;
-    }
-
-    /* --- Text editors (input, shell, output) --- */
-    QTextEdit, QTextBrowser {
-        background: #252526;
-        border: 1px solid #3c3c3c;
-        border-radius: 8px;
-        padding: 8px;
-        font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
-        font-size: 13px;
-        color: #f5f5f5;
-        selection-background-color: #0078d7;
-        selection-color: white;
-    }
-
-    /* --- Frames --- */
-    QFrame {
-        border: 1px solid #3c3c3c;
-        border-radius: 6px;
-        background: transparent;
-    }
-
-    /* --- Status bar --- */
-    QStatusBar {
-        background: #2d2d2d;
-        border-top: 1px solid #3c3c3c;
-        font-size: 12px;
-        padding: 4px;
-        color: #bbbbbb;
-    }
-
-    /* --- Scrollbars --- */
-    QScrollBar:vertical {
-        border: 1px solid #3c3c3c;
-        background: #2a2a2a;
-        width: 10px;
-        margin: 0px;
-        border-radius: 5px;
-    }
-    QScrollBar::handle:vertical {
-        background: #555555;
-        border-radius: 5px;
-        min-height: 20px;
-    }
-    QScrollBar::handle:vertical:hover {
-        background: #777777;
-    }
-    QScrollBar:horizontal {
-        border: 1px solid #3c3c3c;
-        background: #2a2a2a;
-        height: 10px;
-        margin: 0px;
-        border-radius: 5px;
-    }
-    QScrollBar::handle:horizontal {
-        background: #555555;
-        border-radius: 5px;
-        min-width: 20px;
-    }
-    QScrollBar::handle:horizontal:hover {
-        background: #777777;
-    }
-
-    /* --- Tool buttons (if added later) --- */
-    QToolButton {
-        background: #2d2d2d;
-        border: 1px solid #3c3c3c;
-        padding: 6px;
-        margin: 2px;
-        border-radius: 6px;
-        color: #cccccc;
-    }
-    QToolButton:hover {
-        background: #0078d7;
-        color: white;
-        border: 1px solid #005a9e;
-    }
-"""
-        )
-
         self.actionOpen = QAction(MainWindow)
         self.actionOpen.setObjectName("actionOpen")
         self.actionsave = QAction(MainWindow)
@@ -163,6 +38,14 @@ class Ui_MainWindow(object):
         self.actionincrease.setObjectName("actionincrease")
         self.actiondecrease = QAction(MainWindow)
         self.actiondecrease.setObjectName("actiondecrease")
+        self.actionrestart = QAction(MainWindow)
+        self.actionrestart.setObjectName("actionrestart")
+        self.actioninterrupt = QAction(MainWindow)
+        self.actioninterrupt.setObjectName("actioninterrupt")
+        self.actionshutdown = QAction(MainWindow)
+        self.actionshutdown.setObjectName("actionshutdown")
+        self.actionexit = QAction(MainWindow)
+        self.actionexit.setObjectName("actionexit")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -208,7 +91,7 @@ class Ui_MainWindow(object):
 
         self.widget_2 = QWidget(self.centralwidget)
         self.widget_2.setObjectName("widget_2")
-        self.widget_2.setMaximumSize(QSize(16777215, 170))
+        self.widget_2.setMaximumSize(QSize(16777215, 250))
         self.verticalLayout_2 = QVBoxLayout(self.widget_2)
         self.verticalLayout_2.setSpacing(0)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
@@ -239,6 +122,8 @@ class Ui_MainWindow(object):
         self.menubar.setGeometry(QRect(0, 0, 800, 30))
         self.menuFile = QMenu(self.menubar)
         self.menuFile.setObjectName("menuFile")
+        self.menuFile.setMinimumSize(QSize(12, 0))
+        self.menuFile.setMaximumSize(QSize(167777, 16777215))
         self.menuSaveAs = QMenu(self.menubar)
         self.menuSaveAs.setObjectName("menuSaveAs")
         self.menusize = QMenu(self.menubar)
@@ -247,22 +132,42 @@ class Ui_MainWindow(object):
         self.menuexit.setObjectName("menuexit")
         self.menuconvert = QMenu(self.menubar)
         self.menuconvert.setObjectName("menuconvert")
+        self.menuKernel = QMenu(self.menubar)
+        self.menuKernel.setObjectName("menuKernel")
         MainWindow.setMenuBar(self.menubar)
 
         self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuKernel.menuAction())
         self.menubar.addAction(self.menuSaveAs.menuAction())
         self.menubar.addAction(self.menuconvert.menuAction())
         self.menubar.addAction(self.menusize.menuAction())
         self.menubar.addAction(self.menuexit.menuAction())
         self.menuFile.addAction(self.actionnew)
+        self.menuFile.addSeparator()
         self.menuFile.addAction(self.actionopen)
+        self.menuFile.addSeparator()
         self.menuFile.addAction(self.actionsave_2)
+        self.menuFile.addSeparator()
         self.menuSaveAs.addAction(self.actionsave)
+        self.menuSaveAs.addSeparator()
         self.menuSaveAs.addAction(self.actionsaveAs)
+        self.menuSaveAs.addSeparator()
         self.menusize.addAction(self.actionincrease)
+        self.menusize.addSeparator()
         self.menusize.addAction(self.actiondecrease)
+        self.menusize.addSeparator()
+        self.menuexit.addAction(self.actionexit)
+        self.menuexit.addSeparator()
         self.menuconvert.addAction(self.actionconvertToHtml)
+        self.menuconvert.addSeparator()
         self.menuconvert.addAction(self.actionconvert_to_pdf)
+        self.menuconvert.addSeparator()
+        self.menuKernel.addAction(self.actionrestart)
+        self.menuKernel.addSeparator()
+        self.menuKernel.addAction(self.actioninterrupt)
+        self.menuKernel.addSeparator()
+        self.menuKernel.addAction(self.actionshutdown)
+        self.menuKernel.addSeparator()
 
         self.retranslateUi(MainWindow)
 
@@ -296,12 +201,25 @@ class Ui_MainWindow(object):
         self.actiondecrease.setText(
             QCoreApplication.translate("MainWindow", "decrease", None)
         )
+        self.actionrestart.setText(
+            QCoreApplication.translate("MainWindow", "restart", None)
+        )
+        self.actioninterrupt.setText(
+            QCoreApplication.translate("MainWindow", "interrupt", None)
+        )
+        self.actionshutdown.setText(
+            QCoreApplication.translate("MainWindow", "shutdown", None)
+        )
+        self.actionexit.setText(QCoreApplication.translate("MainWindow", "exit", None))
         self.menuFile.setTitle(QCoreApplication.translate("MainWindow", "File", None))
         self.menuSaveAs.setTitle(QCoreApplication.translate("MainWindow", "Save", None))
         self.menusize.setTitle(QCoreApplication.translate("MainWindow", "Size", None))
         self.menuexit.setTitle(QCoreApplication.translate("MainWindow", "Exit", None))
         self.menuconvert.setTitle(
             QCoreApplication.translate("MainWindow", "Convert", None)
+        )
+        self.menuKernel.setTitle(
+            QCoreApplication.translate("MainWindow", "Kernel", None)
         )
 
     # retranslateUi

@@ -17,7 +17,7 @@ from HighLighter import PythonHighlighter
 from HistoryManager import History
 from ScreenManager import Screen
 from EventManager import Event
-
+from StyleSheet import styleSheet
 
 class ShiftEnterFilter(QObject):
     runRequested = Signal()  # signal emitted when Shift+Enter is pressed
@@ -35,6 +35,7 @@ class ShiftEnterFilter(QObject):
 class MainWindow(QMainWindow, Ui_MainWindow, History, Menu, Screen):
     def __init__(self):
         super().__init__()
+        self.setStyleSheet(styleSheet)
         self.setupUi(self)
         self.client = None
         self.currentFile = None
@@ -76,6 +77,9 @@ class MainWindow(QMainWindow, Ui_MainWindow, History, Menu, Screen):
         self.actionconvert_to_pdf.triggered.connect(self.convertToPdf)
         self.actionincrease.triggered.connect(lambda: self.changeFontSize(2))
         self.actiondecrease.triggered.connect(lambda: self.changeFontSize(-2))
+        self.actionrestart.triggered.connect(self.client.restartKernel)
+        self.actioninterrupt.triggered.connect(self.client.interuptKernel)
+        self.actionshutdown.triggered.connect(self.client.shutdown)
 
         # Add optional extra actions (Open vs actionOpen duplicates)
         self.actionOpen.triggered.connect(self.openFile)
@@ -85,7 +89,7 @@ class MainWindow(QMainWindow, Ui_MainWindow, History, Menu, Screen):
         self._filter = ShiftEnterFilter(self)
         self._filter.runRequested.connect(self.eventManager.onRunRequested)
         self.inputEdit.installEventFilter(self._filter)
-
+        self.inputEdit.setFocus()
         # Update statusbar
         self.statusbar.showMessage("Kernel started")
 
